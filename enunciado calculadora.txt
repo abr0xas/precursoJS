@@ -1,0 +1,19 @@
+ CALCULATOR
+
+Haz una calculadora. Un único programa al que le pasarás uno o dos parámetros mediante "prompt". Los resultados deberían ser mostrados con 3 decimales como mucho (En caso que hubieran). El programa debe contemplar e informar al usuario en el caso de que este introduzca cualquier cosa que no sean números.
+
+● Si el usuario introduce UN solo número, deberá mostrar SOLO su raíz cuadrada.
+
+● Si introduce DOS números se mostrarán los resultados de la suma, resta, multiplicación y división de dichos valores.
+
+● Los resultados deberían almacenarse dentro de una array y mostrarlos de una forma amigable al usuario.
+
+// Output>
+Results:
+The result of the sum is resultSum
+The result of the rest is resultRest
+...
+
+● CALCULATOR PRO
+
+Podrías hacer que la calculadora realizara operaciones preguntándole al usuario, a traves del prompt, los números e imprimiendo los datos en consola? Además, se deberá preguntar continuamente hasta que el usuario no quiera introducir más valores, y los cálculos se deben realizar con todos los números introducidos válidos. En caso que se introduzca un valor no válido se debería anunciar mediante un alert pero se debe dar la opción de seguir introduciendo valores.
