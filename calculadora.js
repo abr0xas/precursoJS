@@ -1,6 +1,17 @@
-const num1 = 10;
+const num1  ;
 const num2 = 's';
 var Resultado = [];
+
+
+if(isNaN(num1) && !isNaN(num2)){
+    console.log('No es un numero', num1);
+} else if(isNaN(num2)){
+    console.log('No es un numero', num2);
+
+} else if (...){
+    numSuma(num1, num2);
+    numResta(num1, num2);
+}
 
 function numSuma(num1, num2){
   if (isNaN(num1) || isNaN(num2)) {
