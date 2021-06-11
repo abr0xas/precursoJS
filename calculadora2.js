@@ -1,43 +1,56 @@
-const num1 = 10;
-const num2 = 's';
+const num1 = parseFloat(prompt("Operaciones"));
+const num2 = parseFloat(prompt("Operaciones"));
 var Resultado = [];
 
-function numSuma(num1, num2){
-  if (isNaN(num1) || isNaN(num2)) {
-    return 'No es un numero!';
+if(!isNaN(num1) && isNaN(num2)){
+  function numRaiz(num1){
+    return Math.sqrt(num1)
   }
-  return  num1 + num2 ;
-    
-}
-var hacerSuma = numSuma(num1, num2);
-console.log(hacerSuma);
+  var hacerRaiz = numRaiz(num1);
+  console.log(hacerRaiz);
+  
+} else if(isNaN(num1) && !isNaN(num2)){
+  function numRaiz(num2){
+    return Math.sqrt(num2)
+  }
+  var hacerRaiz = numRaiz(num2);
+  console.log(hacerRaiz);
 
-function numResta(num1, num2){
-  if (isNaN(num1) || isNaN(num2)) {
-    return 'No es un numero!';
-  }
-  return  num1 - num2 ;
-    
-}
-var hacerResta = numResta(num1, num2);
-console.log(hacerResta);
+} else if (isNaN(num1) || isNaN(num2)){
+  
+  console.log('No es un numero');
 
-function numMult(num1, num2){
-  if (isNaN(num1) || isNaN(num2)) {
-    return 'No es un numero!';
-  }
-  return  num1 * num2 ;
+} else if(!isNaN(num1) || !isNaN(num2)){
+  function numSuma(num1, num2){
     
+    return  num1 + num2 ;
+      
+  }
+  var hacerSuma = numSuma(num1, num2);
+  console.log(hacerSuma);
+  
+  function numResta(num1, num2){
+    
+    return  num1 - num2 ;
+      
+  }
+  var hacerResta = numResta(num1, num2);
+  console.log(hacerResta);
+  
+  function numMult(num1, num2){
+    
+    return  num1 * num2 ;
+      
+  }
+  var hacerMult = numMult(num1, num2);
+  console.log(hacerMult);
+  
+  function numDiv(num1, num2){
+    
+    return  num1 / num2 ;
+      
+  }
+  var hacerDiv = numDiv(num1, num2);
+  console.log(hacerDiv);
 }
-var hacerMult = numMult(num1, num2);
-console.log(hacerMult);
 
-function numDiv(num1, num2){
-  if (isNaN(num1) || isNaN(num2)) {
-    return 'No es un numero!';
-  }
-  return  num1 / num2 ;
-    
-}
-var hacerDiv = numDiv(num1, num2);
-console.log(hacerDiv);
