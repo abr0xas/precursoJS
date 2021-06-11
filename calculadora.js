@@ -1,54 +1,78 @@
-const num1  ;
-const num2 = 's';
+const num1 = parseFloat(prompt("Operaciones"));
+const num2 = parseFloat(prompt("Operaciones"));
 var Resultado = [];
 
+function calculatorPro() {
+  let newNumber;
+  let numberList = [];
 
-if(isNaN(num1) && !isNaN(num2)){
-    console.log('No es un numero', num1);
-} else if(isNaN(num2)){
-    console.log('No es un numero', num2);
+  do {
+    newNumber = prompt('Enter a number or press cancel to stop');
+    numberList.push(newNumber)
+  } while (newNumber !== null)
 
-} else if (...){
-    numSuma(num1, num2);
-    numResta(num1, num2);
+  
 }
 
-function numSuma(num1, num2){
-  if (isNaN(num1) || isNaN(num2)) {
-    return 'No es un numero!';
+if(!isNaN(num1) && isNaN(num2)){
+  function numRaiz(num1){
+    return Math.sqrt(num1)
   }
-  return  num1 + num2 ;
-    
-}
-var hacerSuma = numSuma(num1, num2);
-console.log(hacerSuma);
-
-function numResta(num1, num2){
-  if (isNaN(num1) || isNaN(num2)) {
-    return 'No es un numero!';
+  var hacerRaiz = numRaiz(num1);
+  console.log(hacerRaiz);
+  
+} else if(isNaN(num1) && !isNaN(num2)){
+  function numRaiz(num2){
+    return Math.sqrt(num2)
   }
-  return  num1 - num2 ;
-    
-}
-var hacerResta = numResta(num1, num2);
-console.log(hacerResta);
+  var hacerRaiz = numRaiz(num2);
+  console.log(hacerRaiz);
 
-function numMult(num1, num2){
-  if (isNaN(num1) || isNaN(num2)) {
-    return 'No es un numero!';
-  }
-  return  num1 * num2 ;
-    
-}
-var hacerMult = numMult(num1, num2);
-console.log(hacerMult);
+} else if (isNaN(num1) || isNaN(num2)){
+  
+  console.log('No es un numero');
 
-function numDiv(num1, num2){
-  if (isNaN(num1) || isNaN(num2)) {
-    return 'No es un numero!';
-  }
-  return  num1 / num2 ;
+} else if(!isNaN(num1) || !isNaN(num2)){
+  function numSuma(num1, num2){
     
+    return  num1 + num2 ;
+      
+  }
+  var hacerSuma = numSuma(num1, num2);
+  console.log(hacerSuma);
+  
+  function numResta(num1, num2){
+    
+    return  num1 - num2 ;
+      
+  }
+  var hacerResta = numResta(num1, num2);
+  console.log(hacerResta);
+  
+  function numMult(num1, num2){
+    
+    return  num1 * num2 ;
+      
+  }
+  var hacerMult = numMult(num1, num2);
+  console.log(hacerMult);
+  
+  function numDiv(num1, num2){
+    
+    return  num1 / num2 ;
+      
+  }
+  var hacerDiv = numDiv(num1, num2);
+  console.log(hacerDiv);
 }
-var hacerDiv = numDiv(num1, num2);
-console.log(hacerDiv);
+
+prompt("New numbers? y/n")
+
+  Case 'y' => calculatorPro()
+
+    //Output => 
+    //The result of the sum is resultSum
+    //The result of the rest is resultRest
+    
+    
+  Case 'n' => "Bye!"
