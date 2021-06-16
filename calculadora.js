@@ -2,15 +2,6 @@ function calculatorPro() {
   let newNumber;
   let numberList = [];
 
-  do {
-    newNumber = parseFloat(prompt('Enter a number or press cancel to stop'));
-    if (isNaN(newNumber)){
-      alert('introduzca un valor permitido');
-    }else if(!isNaN(newNumber)){
-      numberList.push(newNumber)
-    }
-  } while (newNumber !== null)
-
   function numRaiz(x){
     return Math.sqrt(x);
   };
@@ -27,7 +18,21 @@ function calculatorPro() {
     return  num1 / num2 ; 
   }
 
-  if(!isNaN(num1) && isNaN(num2)){
+  
+
+
+
+
+  do {
+    newNumber = parseFloat(prompt('Enter a number or press cancel to stop'));
+    if (isNaN(newNumber)){
+      alert('introduzca un valor permitido');
+    }else if(!isNaN(newNumber)){
+      numberList.push(newNumber)
+    }
+  } while (newNumber !== null){
+    
+    if(!isNaN(num1) && isNaN(num2)){
   
     var hacerRaiz = numRaiz(num1);
     console.log(hacerRaiz);
@@ -55,6 +60,7 @@ function calculatorPro() {
     var hacerDiv = numDiv(num1, num2);
     console.log(hacerDiv);
   }
+}
   
 }
 
@@ -62,13 +68,38 @@ function calculatorPro() {
 
 
 
-prompt("New numbers? y/n")
-
-  //Case 'y' => calculatorPro()
-
-    //Output => 
-    //The result of the sum is resultSum
-    //The result of the rest is resultRest
-    
-    
- // Case 'n' => "Bye!"
+const inicioCalculo = prompt("New numbers? y/n") 
+switch (inicioCalculo) {
+  case 'y':
+      const elegirOperacion = prompt("Que operacion desea realizar? raiz/suma/resta/multiplicar/dividir") 
+      switch (elegirOperacion) {
+        case 'raiz':
+             calculatorPro();   
+            break;
+        case 'suma':
+            calculatorPro()    
+         break;
+        case 'resta':
+             calculatorPro();
+            
+            break;
+        case 'multipicar':
+            calculatorPro()    
+        break;
+        case 'dividir':
+            calculatorPro()
+            break;
+        default:
+            alert('Elejir una operacion')
+            break;
+      }
+      
+      break;
+  case 'n':    
+  
+   alert ("Bye!");
+  break;
+  default:
+      alert('Elejir entre y/n')
+      break;
+    }
