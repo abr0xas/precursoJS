@@ -2,8 +2,8 @@ function calculatorPro() {
   let newNumber;
   let numberList = [];
 
-  function numRaiz(x){
-    return Math.sqrt(x);
+  function numRaiz(numberList){
+    return Math.sqrt(numberList);
   };
   function numSuma(num1, num2){
     return  num1 + num2 ;  
@@ -17,12 +17,8 @@ function calculatorPro() {
   function numDiv(num1, num2){  
     return  num1 / num2 ; 
   }
-
+  debugger;
   
-
-
-
-
   do {
     newNumber = parseFloat(prompt('Enter a number or press cancel to stop'));
     if (isNaN(newNumber)){
@@ -32,9 +28,9 @@ function calculatorPro() {
     }
   } while (newNumber !== null){
     
-    if(!isNaN(num1) && isNaN(num2)){
-  
-    var hacerRaiz = numRaiz(num1);
+    if(numberList.length === 1){
+        
+    var hacerRaiz = numRaiz(numberList);
     console.log(hacerRaiz);
     
   } else if(isNaN(num1) && !isNaN(num2)){
