@@ -83,7 +83,7 @@ function calculatorPro() {
               function numResta(numberList){
               var totalResta = numberList[0];
               len = numberList.length
-              numberList += numberList.shift()
+              numberList.shift()
             
               for (var i = 0; i < len; i++){
               totalResta -= numberList[i];
