@@ -1,5 +1,5 @@
 debugger;
-bingo();
+
 function bingo(){
 
 let jugador = {nombre:'',inicio: 100, fianl:''}
@@ -9,37 +9,39 @@ let comparar = [];
 let carton = [];
 let vueltas = 0;
 let score = 100;
+let play = true
 
  function generateRandomNumber(){                        
     return Math.floor(Math.random()*10);       
  }
-
  nuevaPartida();
 
  function nuevaPartida(){
 
-    
-        if(confirm('Nueva partida')){
-            players()
-        }else(alert('Gracias por jugar'))
+        play=confirm('desea jugar?')
+        
     
 
- }players();
+ }
+ players();
 
  function players(){
 
     for(let j = 0; j<ranking.length; j++){
         jugador.nombre = prompt('Introducir Nombre jugador');
-    ranking.push(jugador);
-    break;
+        if(jugador.nombre !== null ){
+            ranking.push(jugador);
+            break;
+        }else(nuevaPartida());
+    
   };
   for(let j = 0; j<ranking.length; j++){
   console.log(ranking[j])
   };
-  //alert('El sistema de ranking consite en tener la mayor cantidad de puntos finales al terminar la partida')
- }bingoCard();
-
-    
+  alert('El sistema de ranking consite en tener la mayor cantidad de puntos finales al terminar la partida')
+ }
+ bingoCard();
+ 
  function bingoCard(){
     
   while(carton.length < 5){
@@ -52,7 +54,8 @@ let score = 100;
   console.log(carton);
   console.table(carton);
 
- }bombo();
+ }
+ bombo();
 
  function bombo(){
     
@@ -81,7 +84,8 @@ let score = 100;
    //for(let i= 0; i<carton.length; i++){
             
  //}    
- }jugar();
+ }
+ jugar();
 
  function jugar(){
 
@@ -111,7 +115,7 @@ let score = 100;
         //carton[i][index] = 'x';
         //console.log(carton)
     //};
-    };
+    }
    }
   }
  }
@@ -121,7 +125,8 @@ let score = 100;
      console.log(jugador.final)
      ranking.push(jugador);
 
- }listaRanking();
+ };
+ listaRanking();
 
  function listaRanking(){
     ranking.sort(function(a, b){
@@ -130,7 +135,8 @@ let score = 100;
     for(let r=0; r < ranking.length; r++ ){
         console.log(ranking[r])
     }
- }nuevaPartida();
+ }
+ nuevaPartida();
 
  function nextTurn(){
     const accion = prompt("Nuevo turno? si/no") 
@@ -139,7 +145,8 @@ let score = 100;
             jugar()
             break;
         case 'no':
-            alert('Gracias por jugar')
+            alert('Gracias por jugar');
+            nuevaPartida();
             break;
         default:
             alert('Elejir entre si/no')
@@ -147,19 +154,7 @@ let score = 100;
     }
  }
 
-}
-
-
-//Notas:
-// Este es en teoria el simple pero me confundi y lo hice como si fuera el Pro,
-// la unica diferencia es que en este son 5 numeros y en el pro son 15.
-// Lo que no consigo resolver es:
-// Como ves tengo una funcion global y dentro muhcas, cada una funciona bien pero
-// no se porque ahora a la hora de hacer que funcione no lo hace bien, en el sentido que las
-// funciones no siguen el orden que les he puesto, supongo que me faltan condiciones para que
-// dejen de ejecutar cuando toca.
-// Y el otro problema es ya con el pro, he de poner una funcion mas para que los 15 numeros
-// se conporten como si fueran 3 partes distintas.
+}bingo();
 
 
 
