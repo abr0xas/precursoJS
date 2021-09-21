@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./style.css" rel="stylesheet">
+    <script src="./calculator.js"></script>
+</head>
+<body>
+    <h1>CALCULADORA</h1>
+    <div class="calculator">
+        <h2 class="calculator-titulo">Miwel-Calculator</h2>
+        <input class="calculator-pantalla" type="text" value="0" disabled />
+        <div class="calculator-teclado">
+            <div class="linea-primera">
+                <button onclick="meterDatos(event)" class="boton-claro-7">7</button>
+                <button onclick="meterDatos(event)" class="boton-claro-8">8</button>
+                <button onclick="meterDatos(event)" class="boton-claro-9">9</button>
+                <button onclick="meterDatos(event)" class="boton-oscuro-raiz">√</button>
+            </div>
+            <div>
+                <button onclick="meterDatos(event)" class="boton-claro-4">4</button>
+                <button onclick="meterDatos(event)" class="boton-claro-5">5</button>
+                <button onclick="meterDatos(event)" class="boton-claro-6">6</button>
+                <button onclick="meterDatos(event)" class="boton-oscuro-x">x</button>
+                <button onclick="meterDatos(event)" class="boton-oscuro-div">÷</button>
+            </div>
+            <div>
+                <button onclick="meterDatos(event)" class="boton-claro-1">1</button>
+                <button onclick="meterDatos(event)" class="boton-claro-2">2</button>
+                <button onclick="meterDatos(event)" class="boton-claro-3">3</button>
+                <button onclick="meterDatos(event)" class="boton-oscuro-res">-</button>
+                <button onclick="meterDatos(event)" class="boton-oscuro-sum">+</button>     
+            </div>
+            <div>
+                <button onclick="meterDatos(event)" class="boton-rojo-C">C</button>
+                <button onclick="meterDatos(event)" class="boton-claro-0">0</button>
+                <button onclick="meterDatos(event)" class="boton-claro-punto">.</button>
+                <button onclick="meterDatos(event)" class="boton-azul-igual">=</button>
+            </div>            
+        </div>
+    </div>
+</body>
+</html>

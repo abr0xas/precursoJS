@@ -1,0 +1,158 @@
+html {
+    background: rgb(167, 241, 222); 
+}
+
+hi {
+   text-align: center;
+}
+
+.calculator {
+    width: 450px;
+    height: 600px;
+    background-color: rgb(152, 231, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+    border-radius: 20px;
+    border: 2px solid #2d2d35;
+}
+
+.calculator-teclado {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.linea-primera {
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.boton-claro-punto {
+    padding: 10px;
+    background-color: rgb(243, 237, 211);
+    order: 17;
+
+}
+
+.boton-claro-0 {
+    padding: 10px;
+    background-color: rgb(243, 237, 211);
+    order: 16;
+
+}
+
+.boton-claro-1 {
+    padding: 10px;
+    background-color: rgb(243, 237, 211);
+    order: 10;
+
+}
+
+.boton-claro-2 {
+    padding: 10px;
+    background-color: rgb(243, 237, 211);
+    order: 11;
+
+}
+
+.boton-claro-3 {
+    padding: 10px;
+    background-color: rgb(243, 237, 211);
+    order: 12;
+
+}
+
+.boton-claro-4 {
+    padding: 10px;
+    background-color: rgb(243, 237, 211);
+    order: 5;
+
+}
+
+.boton-claro-5 {
+    padding: 10px;
+    background-color: rgb(243, 237, 211);
+    order: 6;
+
+}
+
+.boton-claro-6 {
+    padding: 10px;
+    background-color: rgb(243, 237, 211);
+    order: 7;
+
+}
+
+.boton-claro-7 {
+    padding: 10px;
+    background-color: rgb(243, 237, 211);
+    order: 1;
+
+}
+
+.boton-claro-8 {
+    padding: 10px;
+    background-color: rgb(243, 237, 211);
+    order: 2;
+
+}
+
+.boton-claro-9 {
+    padding: 10px;
+    background-color: rgb(243, 237, 211);
+    order: 3;
+
+}
+
+.boton-oscuro-raiz {
+    padding: 10px;
+    background-color: rgb(57, 57, 70);
+    flex-grow: 2;
+    order: 4;
+
+}
+
+.boton-oscuro-sum {
+    padding: 10px;
+    background-color: rgb(57, 57, 70);
+    order: 14;
+
+}
+
+.boton-oscuro-res {
+    padding: 10px;
+    background-color: rgb(57, 57, 70);
+    order: 13;
+
+}
+
+.boton-oscuro-x {
+    padding: 10px;
+    background-color: rgb(57, 57, 70);
+    order: 8;
+
+}
+
+.boton-oscuro-div {
+    padding: 10px;
+    background-color: rgb(57, 57, 70);
+    order: 9;
+
+}
+
+.boton-rojo-C {
+    padding: 10px;
+    background-color: rgb(241, 23, 23);
+    order: 15;
+
+}
+
+.boton-azul-igual {
+    padding: 10px;
+    background-color: rgb(16, 70, 172);
+    flex-grow: 2;
+    order: 18;
+
+}
